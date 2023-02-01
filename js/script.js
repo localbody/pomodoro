@@ -3,7 +3,7 @@ import {state} from './state.js'
 import {showTime} from './timer.js'
 
 const initPomodoro = () => {
-  showTime(state.timeLeft)
+  showTime(state.timeWorkLeft)
   initControl()
 }
 

@@ -2,6 +2,8 @@ import {state} from './state.js'
 import {startTimer} from './timer.js'
 
 const btnStart = document.querySelector('.control__btn_start')
+const btnStop = document.querySelector('.control__btn_stop')
+
 const onClickBtnStart = () => {
   // по клику инвертнем состояние
   state.isActive = !state.isActive
@@ -17,6 +19,12 @@ const onClickBtnStart = () => {
   }
 }
 
+const onClickBtnStop = () => {
+  state.isActive = false
+  btnStart.textContent = 'Старт'
+}
+
 export const initControl = () => {
   btnStart.addEventListener('click', onClickBtnStart)
+  btnStop.addEventListener('click', onClickBtnStop)
 }
